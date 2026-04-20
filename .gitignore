@@ -1,1 +1,20 @@
+# App bundles and large archives — download separately, never commit
+*.app/
 *.zip
+*.dmg
+
+# Compiled binaries — rebuild from source
+rec
+send
+slack-inject
+*.o
+*.dylib
+*.node
+
+# Build artifacts
+.build/
+node_modules/
+
+# macOS metadata
+.DS_Store
+**/.DS_Store
