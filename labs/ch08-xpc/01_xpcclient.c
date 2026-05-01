@@ -1,18 +1,18 @@
 /*
  * =============================================================================
- * xpcclient.c — minimal libxpc *client* (Chapter 8 C API lab)
+ * 01_xpcclient.c — minimal libxpc *client* (Chapter 8 C API lab)
  * =============================================================================
  *
  * PURPOSE
  *   Connects to a Mach-registered XPC service (see xpcserver.c + plist) and
  *   sends one dictionary message with a reply handler. Students compare this
- *   flow to NSXPC in labs/xpc/.
+ *   flow to NSXPC in 02_nsxpc*.m and Swift in 06_* (same repo folder).
  *
  * BUILD
- *   clang -fblocks -o xpcclient xpcclient.c
+ *   clang -fblocks -o 01_xpcclient 01_xpcclient.c
  *
  * MACH NAME
- *   Must match xpcserver.c and com.example.student.xpc.plist.template.
+ *   Must match 01_xpcserver.c and 01_com.example.student.xpc.plist.template.
  *
  * =============================================================================
  */

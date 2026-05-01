@@ -1,4 +1,4 @@
-/* Minimal NSXPC listener — pairs with nsxpcclient.m + com.offsec.nsxpc plist. */
+/* Minimal NSXPC listener — pairs with 02_nsxpcclient.m + 02_com.offsec.nsxpc.plist.template. */
 #include <Foundation/Foundation.h>
 
 @protocol MyXPCProtocol

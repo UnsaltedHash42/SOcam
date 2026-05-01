@@ -8,10 +8,10 @@ Use this page **during labs** so you can run commands from one place. Deep expla
 
 | Topic | Directory | What it is |
 |-------|-----------|------------|
-| **C / libxpc** Mach service + client | [`labs/ch08-c-xpc/`](../../../labs/ch08-c-xpc/) | `xpcserver.c`, `xpcclient.c`, plist template — listener vs client flag |
-| **NSXPC** minimal daemon + client | [`labs/ch08-pocs/`](../../../labs/ch08-pocs/) | `nsxpcserver.m`, `nsxpcclient.m`, `com.offsec.nsxpc.plist.template` |
-| **Case-study PoCs** (dangerous — VM only) | [`labs/ch08-pocs/`](../../../labs/ch08-pocs/) | `wifispoofexp.m`, `shovexpc.m`, `zoomxpc.m`, `zoom_exploit_lab.sh` — see that folder’s README for OS requirements |
-| **Swift** privileged helper + exploit | [`labs/xpc/`](../../../labs/xpc/) | `VulnerableHelper/`, `Exploit/exploit.swift`, `install_lab.sh`, `uninstall_lab.sh` |
+| **C / libxpc** Mach service + client | [`labs/ch08-xpc/`](../../../labs/ch08-xpc/) | `01_xpcserver.c`, `01_xpcclient.c`, plist template — listener vs client flag |
+| **NSXPC** minimal daemon + client | [`labs/ch08-xpc/`](../../../labs/ch08-xpc/) | `02_nsxpcserver.m`, `02_nsxpcclient.m`, `02_com.offsec.nsxpc.plist.template` |
+| **Case-study PoCs** (dangerous — VM only) | [`labs/ch08-xpc/`](../../../labs/ch08-xpc/) | `03_wifispoofexp.m`, `04_shovexpc.m`, `05_zoomxpc.m`, `05_zoom_exploit_lab.sh` — see that folder’s README for OS requirements |
+| **Swift** privileged helper + exploit | [`labs/ch08-xpc/`](../../../labs/ch08-xpc/) | `06_VulnerableHelper.swift`, `06_exploit.swift`, `06_install_lab.sh`, `06_uninstall_lab.sh` |
 
 **Drive-only artifacts** (Zoom pkg/zip, old WiFiSpoof, EvenBetter zip, Monterey VM): **[README.md — Lab artifacts](README.md)**.
 
@@ -23,59 +23,59 @@ Use this page **during labs** so you can run commands from one place. Deep expla
 |-----|----------------------|--------------------------------|
 | C XPC | `com.example.student.xpc` | `com.example.student.xpc.plist` |
 | NSXPC demo | `com.offsec.nsxpc` | `com.offsec.nsxpc.plist` |
-| Swift capstone | `com.example.vulnerablehelper` | from `labs/xpc/` install script |
+| Swift capstone | `com.example.vulnerablehelper` | from `labs/ch08-xpc/` install script |
 
 If a lab fails with **connection invalid**, the name in **source**, **plist**, and **`launchctl print`** must match **exactly**.
 
 ---
 
-## Copy-paste: C lab (`labs/ch08-c-xpc`)
+## Copy-paste: C lab (`labs/ch08-xpc`)
 
 ```bash
-cd labs/ch08-c-xpc
-clang -fblocks -Wall -o xpcserver xpcserver.c
-clang -fblocks -Wall -o xpcclient xpcclient.c
-SRV_PATH="$PWD/xpcserver"
-sed "s|__BINPATH__|$SRV_PATH|" com.example.student.xpc.plist.template | sudo tee /Library/LaunchDaemons/com.example.student.xpc.plist >/dev/null
+cd labs/ch08-xpc
+clang -fblocks -Wall -o 01_xpcserver 01_xpcserver.c
+clang -fblocks -Wall -o 01_xpcclient 01_xpcclient.c
+SRV_PATH="$PWD/01_xpcserver"
+sed "s|__BINPATH__|$SRV_PATH|" 01_com.example.student.xpc.plist.template | sudo tee /Library/LaunchDaemons/com.example.student.xpc.plist >/dev/null
 sudo chown root:wheel /Library/LaunchDaemons/com.example.student.xpc.plist
 sudo chmod 644 /Library/LaunchDaemons/com.example.student.xpc.plist
 sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.student.xpc.plist
-./xpcclient
+./01_xpcclient
 ```
 
-**Unload when done:** see [labs/ch08-c-xpc/README.md](../../../labs/ch08-c-xpc/README.md) (bootout + `rm` plist + remove binary if you copied it out of the repo).
+**Unload when done:** see [labs/ch08-xpc/README.md](../../../labs/ch08-xpc/README.md) (bootout + `rm` plist + remove binary if you copied it out of the repo).
 
 ---
 
-## Copy-paste: NSXPC demo (`labs/ch08-pocs`)
+## Copy-paste: NSXPC demo (`labs/ch08-xpc`)
 
 ```bash
-cd labs/ch08-pocs
-clang -fobjc-arc -framework Foundation -o nsxpcserver nsxpcserver.m
-clang -fobjc-arc -framework Foundation -o nsxpcclient nsxpcclient.m
-SRV_PATH="$PWD/nsxpcserver"
-sed "s|__BINPATH__|$SRV_PATH|" com.offsec.nsxpc.plist.template | sudo tee /Library/LaunchDaemons/com.offsec.nsxpc.plist >/dev/null
+cd labs/ch08-xpc
+clang -fobjc-arc -framework Foundation -o 02_nsxpcserver 02_nsxpcserver.m
+clang -fobjc-arc -framework Foundation -o 02_nsxpcclient 02_nsxpcclient.m
+SRV_PATH="$PWD/02_nsxpcserver"
+sed "s|__BINPATH__|$SRV_PATH|" 02_com.offsec.nsxpc.plist.template | sudo tee /Library/LaunchDaemons/com.offsec.nsxpc.plist >/dev/null
 sudo chown root:wheel /Library/LaunchDaemons/com.offsec.nsxpc.plist
 sudo chmod 644 /Library/LaunchDaemons/com.offsec.nsxpc.plist
 sudo launchctl bootstrap system /Library/LaunchDaemons/com.offsec.nsxpc.plist
-./nsxpcclient
+./02_nsxpcclient
 ```
 
 **Unload:** `sudo launchctl bootout system/com.offsec.nsxpc` then `sudo rm /Library/LaunchDaemons/com.offsec.nsxpc.plist`.
 
 ---
 
-## Copy-paste: Swift capstone (`labs/xpc`)
+## Copy-paste: Swift capstone (`labs/ch08-xpc`)
 
 ```bash
-cd labs/xpc
-sudo ./install_lab.sh
-swiftc Exploit/exploit.swift -o /tmp/exploit_run
+cd labs/ch08-xpc
+sudo ./06_install_lab.sh
+swiftc 06_exploit.swift -o /tmp/exploit_run
 /tmp/exploit_run
-sudo ./uninstall_lab.sh
+sudo ./06_uninstall_lab.sh
 ```
 
-Details: [labs/xpc/README_STUDENT.md](../../../labs/xpc/README_STUDENT.md).
+Details: [labs/ch08-xpc/README.md](../../../labs/ch08-xpc/README.md).
 
 ---
 
@@ -87,7 +87,7 @@ Details: [labs/xpc/README_STUDENT.md](../../../labs/xpc/README_STUDENT.md).
 | PackageKit / Shove | [case-studies/cve-2022-26712-packagekit.md](case-studies/cve-2022-26712-packagekit.md) |
 | Zoom | [case-studies/zoom-583-lpe.md](case-studies/zoom-583-lpe.md) |
 
-Runnable PoC source for those lectures lives in **`labs/ch08-pocs/`** — only on instructor-approved VMs and software builds.
+Runnable PoC source for those lectures lives in **`labs/ch08-xpc/`** — only on instructor-approved VMs and software builds.
 
 ---
 

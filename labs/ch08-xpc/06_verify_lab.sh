@@ -9,5 +9,5 @@ if launchctl print "system/${LABEL}" >/dev/null 2>&1; then
 	exit 0
 fi
 
-echo "[-] ${LABEL} not found (install with sudo ./install_lab.sh first)"
+echo "[-] ${LABEL} not found (install with sudo ./06_install_lab.sh first)"
 exit 1

@@ -20,8 +20,8 @@ import Foundation
  *     not ship full third-party exploit PoC source here (legal + bitrot).
  *
  * MACH SERVICE NAME
- *   Must match VulnerableHelper/com.example.vulnerablehelper.plist and the
- *   client in Exploit/exploit.swift — change all three together if you rename.
+ *   Must match 06_com.example.vulnerablehelper.plist and the client in
+ *   06_exploit.swift — change all three together if you rename.
  *
  * =============================================================================
  */

@@ -2,13 +2,13 @@
 #
 # install_lab.sh — build and install the teaching-only VulnerableHelper as root.
 #
-# Prerequisites: run from labs/xpc with sudo. Uninstall with ./uninstall_lab.sh.
+# Prerequisites: run from labs/ch08-xpc with sudo. Uninstall with ./06_uninstall_lab.sh.
 # Students: all logic is also explained in VulnerableHelper.swift and README_STUDENT.md.
 #
 
 # Configuration
-HELPER_SRC="./VulnerableHelper/VulnerableHelper.swift"
-HELPER_PLIST="./VulnerableHelper/com.example.vulnerablehelper.plist"
+HELPER_SRC="./06_VulnerableHelper.swift"
+HELPER_PLIST="./06_com.example.vulnerablehelper.plist"
 HELPER_BIN="com.example.vulnerablehelper"
 DEST_BIN="/Library/PrivilegedHelperTools/$HELPER_BIN"
 DEST_PLIST="/Library/LaunchDaemons/com.example.vulnerablehelper.plist"
@@ -26,7 +26,7 @@ fi
 
 # 2. Install (Requires Root)
 if [ "$EUID" -ne 0 ]; then
-    echo "[!] Please run as root (sudo ./install_lab.sh)"
+    echo "[!] Please run as root (sudo ./06_install_lab.sh)"
     rm "$HELPER_BIN"
     exit 1
 fi
@@ -51,4 +51,4 @@ launchctl load "$DEST_PLIST"
 
 echo "[+] Lab Installed! Service 'com.example.vulnerablehelper' is running."
 echo "[*] You can verify with: launchctl list | grep vulnerablehelper"
-echo "[*] Teardown: sudo ./uninstall_lab.sh"
+echo "[*] Teardown: sudo ./06_uninstall_lab.sh"

@@ -1,6 +1,6 @@
 /*
  * =============================================================================
- * xpcserver.c — minimal libxpc *listener* + peer handler (Chapter 8 C API lab)
+ * 01_xpcserver.c — minimal libxpc *listener* + peer handler (Chapter 8 C API lab)
  * =============================================================================
  *
  * PURPOSE
@@ -15,7 +15,7 @@
  *   3) Reply — xpc_dictionary_create_reply ties the reply to the inbound message.
  *
  * BUILD
- *   clang -fblocks -o xpcserver xpcserver.c
+ *   clang -fblocks -o 01_xpcserver 01_xpcserver.c
  *
  * =============================================================================
  */

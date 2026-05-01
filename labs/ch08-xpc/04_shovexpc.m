@@ -3,11 +3,11 @@
  * Requires Monterey (or matching VM) before Apple’s fix; run compiled binary as root.
  *
  * Build (paths vary by Xcode SDK — adjust PackageKit.tbd):
- *   gcc -framework Foundation \
+ *   gcc -fobjc-arc -framework Foundation \
  *     "$(xcrun --show-sdk-path)/System/Library/PrivateFrameworks/PackageKit.framework/PackageKit.tbd" \
- *     shovexpc.m -o shovexpc
+ *     04_shovexpc.m -o 04_shovexpc
  *
- * Run: sudo ./shovexpc
+ * Run: sudo ./04_shovexpc
  */
 
 #import <Foundation/Foundation.h>

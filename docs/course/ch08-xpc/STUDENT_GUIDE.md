@@ -9,11 +9,11 @@ This guide replaces reliance on the course PDF. Session numbers are suggestions;
 | Session (this guide) | Primary repo code / doc |
 |----------------------|-------------------------|
 | A — Why XPC | *Observation only* — use any app’s `Contents/XPCServices` + `codesign` |
-| B — C API | [`labs/ch08-c-xpc/`](../../../labs/ch08-c-xpc/) |
-| C — NSXPC | [`labs/ch08-pocs/`](../../../labs/ch08-pocs/) (`nsxpcserver.m`, `nsxpcclient.m`, plist template) |
+| B — C API | [`labs/ch08-xpc/`](../../../labs/ch08-xpc/) (`01_xpcclient.c`, `01_xpcserver.c`, `01_com.example.student.xpc.plist.template`) |
+| C — NSXPC | [`labs/ch08-xpc/`](../../../labs/ch08-xpc/) (`02_nsxpcserver.m`, `02_nsxpcclient.m`, `02_com.offsec.nsxpc.plist.template`) |
 | D–E — Attack model & APIs | [`case-studies/README.md`](case-studies/README.md) + Apple docs (names in guide) |
-| F–H — Case studies | [`case-studies/*.md`](case-studies/) + PoC sources in [`labs/ch08-pocs/`](../../../labs/ch08-pocs/) |
-| I — Wrap | Comparison table (below) + [`labs/xpc/`](../../../labs/xpc/) capstone |
+| F–H — Case studies | [`case-studies/*.md`](case-studies/) + PoC sources in [`labs/ch08-xpc/`](../../../labs/ch08-xpc/) |
+| I — Wrap | Comparison table (below) + [`labs/ch08-xpc/`](../../../labs/ch08-xpc/) capstone |
 
 ---
 
@@ -52,7 +52,7 @@ This guide replaces reliance on the course PDF. Session numbers are suggestions;
 - Top-level messages are **dictionaries** (`xpc_object_t` with type `XPC_TYPE_DICTIONARY`).
 - `xpc_connection_create_mach_service` on the **client** (third arg `0`) vs **listener** (`XPC_CONNECTION_MACH_SERVICE_LISTENER`) on the server.
 
-**Lab:** [labs/ch08-c-xpc/README.md](../../../labs/ch08-c-xpc/README.md)
+**Lab:** [labs/ch08-xpc/README.md](../../../labs/ch08-xpc/README.md)
 
 **Debug habit:** Print unknown objects with **`xpc_copy_description`** (remember to balance retain/release rules your instructor sets for the course).
 
@@ -67,7 +67,7 @@ This guide replaces reliance on the course PDF. Session numbers are suggestions;
 
 **Goals:** Map Objective-C / Swift **protocols** to remote calls; locate **`NSXPCListenerDelegate`** and **`listener:shouldAcceptNewConnection:`**.
 
-**Lab (same ideas as class, in Objective-C):** [`labs/ch08-pocs/README.md`](../../../labs/ch08-pocs/README.md) — build `nsxpcserver` / `nsxpcclient`, install `com.offsec.nsxpc.plist`, round-trip one RPC. **Commands:** also in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md).
+**Lab (same ideas as class, in Objective-C):** [`labs/ch08-xpc/README.md`](../../../labs/ch08-xpc/README.md) — build `02_nsxpcserver` / `02_nsxpcclient`, install `com.offsec.nsxpc.plist`, round-trip one RPC. **Commands:** also in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md).
 
 **Rules of thumb (NSXPC):**
 
@@ -109,7 +109,7 @@ This guide replaces reliance on the course PDF. Session numbers are suggestions;
 
 ## Sessions F–H — Real-world case studies
 
-Work from **`case-studies/`** for structured questions; your instructor supplies **exact builds** (Drive / VM). **Runnable PoC source** that matches the course narrative lives in **`labs/ch08-pocs/`** (same filenames the instructor walks through — build lines in that README and in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md)).
+Work from **`case-studies/`** for structured questions; your instructor supplies **exact builds** (Drive / VM). **Runnable PoC source** that matches the course narrative lives in **`labs/ch08-xpc/`** (same filenames the instructor walks through — build lines in that README and in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md)).
 
 Typical arc per case:
 
@@ -121,9 +121,9 @@ Typical arc per case:
 
 **Tracks:**
 
-- [case-studies/cve-2021-44214-wifispoof.md](case-studies/cve-2021-44214-wifispoof.md) — helper: `wifispoofexp.m`
-- [case-studies/cve-2022-26712-packagekit.md](case-studies/cve-2022-26712-packagekit.md) — PoC: `shovexpc.m` (**Monterey &lt; 12.4**)
-- [case-studies/zoom-583-lpe.md](case-studies/zoom-583-lpe.md) — `zoomxpc.m` + `zoom_exploit_lab.sh` (+ Drive artifacts)
+- [case-studies/cve-2021-44214-wifispoof.md](case-studies/cve-2021-44214-wifispoof.md) — helper: `03_wifispoofexp.m`
+- [case-studies/cve-2022-26712-packagekit.md](case-studies/cve-2022-26712-packagekit.md) — PoC: `04_shovexpc.m` (**Monterey &lt; 12.4**)
+- [case-studies/zoom-583-lpe.md](case-studies/zoom-583-lpe.md) — `05_zoomxpc.m` + `05_zoom_exploit_lab.sh` (+ Drive artifacts)
 
 ---
 
@@ -131,7 +131,7 @@ Typical arc per case:
 
 **Compare** the three case studies on one table: reachability, trust mistake, primitive, impact, lesson.
 
-**Controlled first-party exploit (you own the helper):** [labs/xpc/README_STUDENT.md](../../../labs/xpc/README_STUDENT.md) — `install_lab.sh` → `swiftc Exploit/exploit.swift` → run → **`uninstall_lab.sh`**. Commands duplicated in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md).
+**Controlled first-party exploit (you own the helper):** [labs/ch08-xpc/README.md](../../../labs/ch08-xpc/README.md) — `06_install_lab.sh` → `swiftc 06_exploit.swift` → run → **`06_uninstall_lab.sh`**. Commands duplicated in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md).
 
 **Prepare for next module:** How XPC weaknesses chain with **TCC**, **SIP**, and **injection** lessons later in the course (instructor will point to exact modules).
 

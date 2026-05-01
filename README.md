@@ -23,8 +23,7 @@ Binaries are **not** in git. Read [`resources/README.md`](resources/README.md) a
 labs/
   dylib-injection/     # Primary dylib / shellcode lab (use this path)
   machports/           # Extra Mach port samples from class
-  ch08-c-xpc/          # C libxpc Mach service lab (Chapter 8)
-  xpc/                 # Swift NSXPC privileged-helper lab
+  ch08-xpc/            # Chapter 8 — all XPC labs (`01_`–`06_*` sources in one folder)
 docs/
   course/
     ch08-xpc/          # XPC student guide, diagrams, assessment, case worksheets
@@ -39,4 +38,4 @@ This repo does **not** include vendor course PDFs or proprietary manuals. Use on
 - **Chapter 8 (full voice lectures, in order):** start at [`instructor/ch08-xpc/00_HOW_TO_TEACH_CH08.md`](instructor/ch08-xpc/00_HOW_TO_TEACH_CH08.md), then teach from [`01_what_is_xpc.md`](instructor/ch08-xpc/01_what_is_xpc.md) through [`09_wrap_and_swift_capstone.md`](instructor/ch08-xpc/09_wrap_and_swift_capstone.md).
 - **Chapter 8 cheat sheet (bailouts / Drive filenames only):** [`instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`](instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md)
 - **Org workflow / git hygiene:** [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md)
-- **Reference POC sources (WiFiSpoof / Shove / Zoom / NSXPC demo):** [`labs/ch08-pocs/README.md`](labs/ch08-pocs/README.md)
+- **Reference POC sources (WiFiSpoof / Shove / Zoom / NSXPC demo):** [`labs/ch08-xpc/README.md`](labs/ch08-xpc/README.md)

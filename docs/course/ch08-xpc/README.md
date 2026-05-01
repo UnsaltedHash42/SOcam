@@ -18,7 +18,7 @@ This folder is the **Markdown-first** spine for the macOS reverse-engineering un
 
 | Filename (typical) | Session / lab |
 |--------------------|---------------|
-| `ZoomInstallerIT-5.8.3.pkg` | Zoom 5.8.3 / `zoom_exploit_lab.sh` |
+| `ZoomInstallerIT-5.8.3.pkg` | Zoom 5.8.3 / `05_zoom_exploit_lab.sh` |
 | `zoom.us.app-4.6.7.zip` | same |
 | WiFiSpoof vulnerable installer (instructor-named) | WiFiSpoof / CVE-2021-44214 |
 | `EvenBetterAuthorizationSample.zip` (optional) | EvenBetter pattern (Session F) |
@@ -42,15 +42,13 @@ Answer keys (if used): keep private per [`FOR_INSTRUCTORS.md`](../../FOR_INSTRUC
 
 | Path | Purpose |
 |------|---------|
-| [labs/ch08-c-xpc/README.md](../../../labs/ch08-c-xpc/README.md) | Minimal **C / libxpc** Mach service + client |
-| [labs/ch08-pocs/README.md](../../../labs/ch08-pocs/README.md) | **NSXPC** minimal pair + **case-study PoCs** (WiFiSpoof / Shove / Zoom) — VM-only |
-| [labs/xpc/README_STUDENT.md](../../../labs/xpc/README_STUDENT.md) | **Swift NSXPC** privileged helper + exploit |
+| [labs/ch08-xpc/README.md](../../../labs/ch08-xpc/README.md) | **All** Chapter 8 runnable code in **one** directory: **`01_`–`06_*`** files in teaching order — C `libxpc`, NSXPC demo, case-study PoCs (VM-only), Swift capstone + install scripts |
 
 ## Ethics and safety
 
 - Only attack **your own** VMs or **course-provided** targets.
 - Do not point class exploits at **classmates’**, **production**, or **unknown** Mach services.
-- After privileged labs, run **`uninstall_lab.sh`** (see Swift lab README) and delete marker files.
+- After privileged labs, run **`06_uninstall_lab.sh`** (see Swift lab README) and delete marker files.
 
 ## Copyright note
 
