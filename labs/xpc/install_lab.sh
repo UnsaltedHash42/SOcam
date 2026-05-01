@@ -1,4 +1,10 @@
 #!/bin/bash
+#
+# install_lab.sh — build and install the teaching-only VulnerableHelper as root.
+#
+# Prerequisites: run from labs/xpc with sudo. Uninstall with ./uninstall_lab.sh.
+# Students: all logic is also explained in VulnerableHelper.swift and README_STUDENT.md.
+#
 
 # Configuration
 HELPER_SRC="./VulnerableHelper/VulnerableHelper.swift"

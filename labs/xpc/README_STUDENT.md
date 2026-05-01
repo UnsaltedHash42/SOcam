@@ -2,6 +2,17 @@
 
 This lab demonstrates **local privilege escalation** through an **`NSXPCListener`** that accepts **any** client. Run only on a **VM** or machine you can wipe.
 
+## What lives in Git vs Google Drive
+
+| Material | Where |
+|----------|--------|
+| **All source** for this XPC unit (Swift helper + client, C client/server, plists, scripts) | **This repository** — well commented on purpose |
+| **Large apps** (Slack, old vulnerable installers, VM disks) | **Google Drive** (or similar) — see repo root `resources/README.md` |
+
+## “Real world” CVE labs (WiFiSpoof, PackageKit, Zoom)
+
+Those sessions use **worksheets** under `docs/course/ch08-xpc/case-studies/` plus **binaries your instructor puts on Drive**. We do **not** ship full third-party exploit PoC source in git (copyright, patch level, and repo size). The **only** runnable exploit code in-tree for XPC is **`Exploit/exploit.swift`** against **`com.example.vulnerablehelper`** — same *idea* (missing client auth on a privileged XPC surface), controlled scope.
+
 ## Components
 
 | Path | Role |
