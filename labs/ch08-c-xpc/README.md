@@ -1,6 +1,6 @@
 # C / libxpc Mach service lab
 
-Minimal **root LaunchDaemon** listener + **unprivileged client** for `exp-312`-style Chapter 8.2 practice. Mach service name: **`com.example.student.xpc`** (change everywhere if you conflict).
+Minimal **root LaunchDaemon** listener + **unprivileged client** for Chapter **8.2–style** XPC API practice. Mach service name: **`com.example.student.xpc`** (change everywhere if you conflict).
 
 ## Prerequisites
 
