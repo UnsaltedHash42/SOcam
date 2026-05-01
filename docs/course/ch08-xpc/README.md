@@ -33,7 +33,7 @@ Full rationale and optional course-wide files (Slack, MachOView, Cyberduck): [`.
 | [STUDENT_QUICK_REFERENCE.md](STUDENT_QUICK_REFERENCE.md) | Student | **One page:** lab paths, Mach names, copy-paste builds — use during class instead of transcribing |
 | [STUDENT_GUIDE.md](STUDENT_GUIDE.md) | Student | Session order, concepts, labs, troubleshooting |
 | [diagrams.md](diagrams.md) | Student | Figures (Mermaid) and whiteboard prompts |
-| [ASSESSMENT.md](ASSESSMENT.md) | Student | Rubric and exit tickets |
+| [ASSESSMENT.md](ASSESSMENT.md) | Student | Optional exercises and discussion prompts (not graded) |
 | [case-studies/](case-studies/) | Student + instructor | Real-world tracks; instructor fills bundle YAML (private YAML gitignored) |
 
 Answer keys (if used): keep private per [`FOR_INSTRUCTORS.md`](../../FOR_INSTRUCTORS.md); not required to complete labs.
