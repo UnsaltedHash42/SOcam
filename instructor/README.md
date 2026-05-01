@@ -1,6 +1,10 @@
 # Instructor materials (voice tracks)
 
-**Chapter 8 lecture scripts are not pushed to GitHub.** After `git clone`, restore these under **`instructor_private/ch08-xpc/`** (create the directory if needed) from your cohort’s private archive, LMS, or lead instructor — or keep them in a **separate private git repo** and symlink if you prefer.
+**Chapter 8 lecture scripts are not pushed to GitHub.**
+
+**Where to edit locally:** Keep your working copies in **`instructor/ch08-xpc/`** inside this repo — that directory is **`.gitignore`d`** (safe from accidental `git push`). Keep a duplicate or backup under **`instructor_private/ch08-xpc/`** (also gitignored) if you prefer a second location. Only **`instructor/README.md`** here is tracked on the remote.
+
+After a fresh **`git clone`**, restore **`instructor/ch08-xpc/`** / **`instructor_private/ch08-xpc/`** from your backup, LMS, or zip — clones do not include these files from GitHub.
 
 Expected filenames (parity with historical `instructor/ch08-xpc/`):
 
