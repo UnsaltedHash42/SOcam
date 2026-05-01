@@ -36,6 +36,8 @@ This repo does **not** include vendor course PDFs or proprietary manuals. Use on
 
 ## Instructors
 
-- **Chapter 8 one-screen brief:** [`instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`](instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md) — script + Hopper + Terminal + bailouts.
+- **Chapter 8 — which doc when:** [`instructor/ch08-xpc/CH08_DOCUMENT_MAP.md`](instructor/ch08-xpc/CH08_DOCUMENT_MAP.md) (tab order + MASTER ↔ deep companions).
+- **Chapter 8 live clock:** [`instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`](instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md) — sessions, terminal, bailouts.
+- **Chapter 8 depth (Hopper + listings):** [`CH08_DEEP_01_INTRO_C_NSXPC.md`](instructor/ch08-xpc/CH08_DEEP_01_INTRO_C_NSXPC.md) · [`CH08_DEEP_02_ATTACK_VERIFICATION_EVENBETTER.md`](instructor/ch08-xpc/CH08_DEEP_02_ATTACK_VERIFICATION_EVENBETTER.md) · [`CH08_DEEP_03_CASE_STUDIES_WIFISPOOF_SHOVE_ZOOM.md`](instructor/ch08-xpc/CH08_DEEP_03_CASE_STUDIES_WIFISPOOF_SHOVE_ZOOM.md)
 - **Org workflow / git hygiene:** [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md)
 - **Reference POC sources (WiFiSpoof / Shove / Zoom / NSXPC demo):** [`labs/ch08-pocs/README.md`](labs/ch08-pocs/README.md)
