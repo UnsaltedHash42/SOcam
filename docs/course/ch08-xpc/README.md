@@ -1,6 +1,6 @@
 # Chapter 8: XPC (student materials)
 
-This folder is the **Markdown-first** spine for the macOS reverse-engineering unit on **XPC** and attacks against **privileged helpers**. It is designed so students can follow **without** the course PDF: everything needed for structure, exercises, and ethics is here or in `labs/`. **Instructors:** voice lectures (`00`, `01_…`–`09_`, `MASTER_*`) stay **off GitHub** — use your team’s **`instructor/ch08-xpc/`** or **`instructor_private/ch08-xpc/`** bundle after clone (see repo root **`FOR_INSTRUCTORS.md`**).
+This folder is the **Markdown-first** spine for the macOS reverse-engineering unit on **XPC** and attacks against **privileged helpers**. It is designed so students can follow **without** the course PDF: everything needed for structure, exercises, and ethics is here or in `labs/`. **Instructors:** voice lectures (`00`, `01_…`–`09_`, `MASTER_*`) are **not** in this clone — your team distributes them outside git (LMS, zip, or private mirror). Recreate **`instructor/ch08-xpc/`** or **`instructor_private/ch08-xpc/`** locally after clone if you use that layout.
 
 ## What you need
 
@@ -36,7 +36,7 @@ Full rationale and optional course-wide files (Slack, MachOView, Cyberduck): [`.
 | [ASSESSMENT.md](ASSESSMENT.md) | Student | Optional exercises and discussion prompts (not graded) |
 | [case-studies/](case-studies/) | Student + instructor | Real-world tracks; instructor fills bundle YAML (private YAML gitignored) |
 
-Answer keys (if used): keep private per [`FOR_INSTRUCTORS.md`](../../FOR_INSTRUCTORS.md); not required to complete labs.
+Answer keys (if used): keep private to your cohort; not required to complete labs.
 
 ## Labs (code)
 
