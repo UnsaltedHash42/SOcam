@@ -1,6 +1,6 @@
 # Chapter 8: XPC (student materials)
 
-This folder is the **Markdown-first** spine for the macOS reverse-engineering unit on **XPC** and attacks against **privileged helpers**. It is designed so students can follow **without** the course PDF: everything needed for structure, exercises, and ethics is here or in `labs/`. **Instructors:** voice lectures (`00`, `01_…`–`09_`, `MASTER_*`) stay **off GitHub** — use your team’s **`instructor_private/ch08-xpc/`** bundle after clone (see repo root **`FOR_INSTRUCTORS.md`** and **`instructor/README.md`**).
+This folder is the **Markdown-first** spine for the macOS reverse-engineering unit on **XPC** and attacks against **privileged helpers**. It is designed so students can follow **without** the course PDF: everything needed for structure, exercises, and ethics is here or in `labs/`. **Instructors:** voice lectures (`00`, `01_…`–`09_`, `MASTER_*`) stay **off GitHub** — use your team’s **`instructor/ch08-xpc/`** or **`instructor_private/ch08-xpc/`** bundle after clone (see repo root **`FOR_INSTRUCTORS.md`**).
 
 ## What you need
 

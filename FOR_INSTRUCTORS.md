@@ -4,10 +4,11 @@ This repository is organized so **`git clone`** gives students **labs + student 
 
 ## What never goes to the student remote
 
-**Chapter 8 voice lectures** (`instructor/ch08-xpc/` on disk historically: `00`, `01_…`–`09_`, `MASTER_*`, optional `module_09_xpc.md`) are **gitignored** and **never pushed** — keep authoritative copies under **`instructor_private/ch08-xpc/`** plus backup/LMS/private repo. **`labs/ch08-xpc/`** (student lab sources) stays tracked here. Treat any **public** fork as student-safe: no speaker scripts on the remote.
+**Entire `instructor/` directory** (including `instructor/ch08-xpc/` voice tracks: `00`, `01_…`–`09_`, `MASTER_*`, optional `module_09_xpc.md`, `LESSON_SCRIPT.md`, etc.) is **`.gitignore`d** and **never pushed**. After `git clone`, recreate **`instructor/ch08-xpc/`** from backup/LMS or copy from **`instructor_private/ch08-xpc/`**. **`labs/ch08-xpc/`** (student lab sources) stays tracked here. Treat any **public** fork as student-safe: no speaker scripts on the remote.
 
 The root **`.gitignore`** still excludes:
 
+- **`instructor/`** — whole tree; do not `git add -f` paths under it.
 - `exp-312.pdf`, `exp-312.md` — keep on your laptop or LMS; do not rely on git for OffSec redistribution policy.
 - `module_09_xpc.md` — moved under **`instructor_private/`** (copy there; root copy removed from the canonical tree).
 - **`instructor_private/`** — lesson scripts, answer keys, cohort YAML with DMG paths.
@@ -33,7 +34,7 @@ GitHub is a poor CDN. Prefer:
 
 ## One remote workflow
 
-- **Single public (or org-internal) repo**: what is tracked **is** the student bundle. Your private notes stay untracked in `instructor_private/` and local-only PDFs.
+- **Single public (or org-internal) repo**: what is tracked **is** the student bundle. Your voice tracks live under **`instructor/`** and **`instructor_private/`** on disk only (both ignored); local-only PDFs stay out of git.
 - If you need **backup** of instructor files on GitHub too, use a **second private repository** or a **private branch** on a paid/org plan — do not push `instructor_private/` to a student-visible remote.
 
 ## Verify before `git push`
@@ -43,3 +44,12 @@ GitHub is a poor CDN. Prefer:
 ```
 
 Fix any reported paths before pushing.
+
+## Chapter 8 filenames to restore locally (not in `git clone`)
+
+Create **`instructor/ch08-xpc/`** (or **`instructor_private/ch08-xpc/`**) and drop in:
+
+- `00_HOW_TO_TEACH_CH08.md`
+- `01_what_is_xpc.md` … `09_wrap_and_swift_capstone.md`
+- `MASTER_CH08_INSTRUCTOR.md`
+- optionally `module_09_xpc.md`, `LESSON_SCRIPT.md`, answer keys or cohort YAML (**never** commit filled cohort paths to this remote)
