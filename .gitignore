@@ -5,6 +5,8 @@ module_09_xpc.md
 instructor_notes.md
 instructor_master_class.md
 instructor_private/
+# Voice lectures + instructor scripts (keep in instructor_private/ch08-xpc/ or separate private repo)
+instructor/ch08-xpc/
 
 # Internal planning (optional: remove this line if you want plans in a private branch)
 docs/plans/

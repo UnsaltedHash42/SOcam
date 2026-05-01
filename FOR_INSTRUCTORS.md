@@ -4,7 +4,7 @@ This repository is organized so **`git clone`** gives students **labs + student 
 
 ## What never goes to the student remote
 
-**Org-private repo:** `instructor/ch08-xpc/` (`00_HOW_TO_TEACH_CH08.md`, numbered lectures `01_…`–`09_…`, `MASTER_CH08_INSTRUCTOR.md` cheat sheet, `module_09_xpc.md`) and `labs/ch08-xpc/` (reference POCs) are **tracked** for staff + enrolled students on the same GitHub — still classroom-only; do not mirror to a **public** fork without stripping them.
+**Chapter 8 voice lectures** (`instructor/ch08-xpc/` on disk historically: `00`, `01_…`–`09_`, `MASTER_*`, optional `module_09_xpc.md`) are **gitignored** and **never pushed** — keep authoritative copies under **`instructor_private/ch08-xpc/`** plus backup/LMS/private repo. **`labs/ch08-xpc/`** (student lab sources) stays tracked here. Treat any **public** fork as student-safe: no speaker scripts on the remote.
 
 The root **`.gitignore`** still excludes:
 
@@ -26,7 +26,7 @@ The root **`.gitignore`** still excludes:
 
 GitHub is a poor CDN. Prefer:
 
-- **Google Drive** (or similar): exact Chapter 8 filenames and optional course-wide blobs are listed in **`resources/README.md`** and **`instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`** §15. Paste your folder URL into **`docs/course/ch08-xpc/README.md`** by replacing `REPLACE_WITH_YOUR_FOLDER_ID` in the markdown link (or point students to LMS only and strip the placeholder from a private fork).
+- **Google Drive** (or similar): student-facing filenames are summarized in **`docs/course/ch08-xpc/README.md`** (*Lab artifacts* table) and **`resources/README.md`**; your private **`MASTER_CH08_INSTRUCTOR.md`** §15 duplicate (under `instructor_private/ch08-xpc/`) can hold extra bailout detail. Paste your folder URL into **`docs/course/ch08-xpc/README.md`** by replacing `REPLACE_WITH_YOUR_FOLDER_ID` in the markdown link (or point students to LMS only and strip the placeholder from a private fork).
 - **GitHub Releases** (attach a `.zip` / `.dmg` per cohort; students download release asset), or
 - **Org file share** (S3, internal artifact server) linked from LMS, or
 - **Git LFS** only if your org pays for bandwidth and you enforce quotas.

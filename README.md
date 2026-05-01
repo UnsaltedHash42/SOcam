@@ -35,7 +35,6 @@ This repo does **not** include vendor course PDFs or proprietary manuals. Use on
 
 ## Instructors
 
-- **Chapter 8 (full voice lectures, in order):** start at [`instructor/ch08-xpc/00_HOW_TO_TEACH_CH08.md`](instructor/ch08-xpc/00_HOW_TO_TEACH_CH08.md), then teach from [`01_what_is_xpc.md`](instructor/ch08-xpc/01_what_is_xpc.md) through [`09_wrap_and_swift_capstone.md`](instructor/ch08-xpc/09_wrap_and_swift_capstone.md).
-- **Chapter 8 cheat sheet (bailouts / Drive filenames only):** [`instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`](instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md)
+- **Chapter 8 lecture scripts:** not committed to GitHub. After `git clone`, restore **`instructor_private/ch08-xpc/`** (same filenames as before: `00_HOW_TO_TEACH_CH08.md`, `01_…`–`09_`, `MASTER_CH08_INSTRUCTOR.md`, …) from your cohort’s private archive or LMS. Pointers: [`instructor/README.md`](instructor/README.md), [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md).
 - **Org workflow / git hygiene:** [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md)
 - **Reference POC sources (WiFiSpoof / Shove / Zoom / NSXPC demo):** [`labs/ch08-xpc/README.md`](labs/ch08-xpc/README.md)

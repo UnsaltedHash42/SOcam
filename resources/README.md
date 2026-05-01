@@ -12,7 +12,7 @@ Large binaries **are not stored in git** (GitHub file limits, repo bloat, licens
 
 ## Optional class mirror (Google Drive)
 
-If your instructor shares a **Google Drive** (or LMS) link for frozen lab builds, download archives into `resources/` (still gitignored). **Canonical filename list** for what belongs on Drive vs in git: **`instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`** §15 and **`docs/course/ch08-xpc/README.md`** (student link placeholder).
+If your instructor shares a **Google Drive** (or LMS) link for frozen lab builds, download archives into `resources/` (still gitignored). **Filename expectations** for Chapter 8 live in **`docs/course/ch08-xpc/README.md`** (*Lab artifacts* table); instructors may mirror an extended checklist in their private **`instructor_private/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`** §15.
 
 ### Quick list — Chapter 8 artifacts (large / licensed)
 
