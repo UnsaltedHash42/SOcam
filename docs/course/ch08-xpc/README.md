@@ -1,6 +1,6 @@
 # Chapter 8: XPC (student materials)
 
-This folder is the **Markdown-first** spine for the macOS reverse-engineering unit on **XPC** and attacks against **privileged helpers**. It is designed so students can follow **without** the course PDF: everything needed for structure, exercises, and ethics is here or in `labs/`.
+This folder is the **Markdown-first** spine for the macOS reverse-engineering unit on **XPC** and attacks against **privileged helpers**. It is designed so students can follow **without** the course PDF: everything needed for structure, exercises, and ethics is here or in `labs/`. **Instructor** talk-track: [`../../instructor/ch08-xpc/00_HOW_TO_TEACH_CH08.md`](../../instructor/ch08-xpc/00_HOW_TO_TEACH_CH08.md) (numbered `01_…`–`09_…` lectures walk the same repo code).
 
 ## What you need
 
@@ -30,18 +30,20 @@ Full rationale and optional course-wide files (Slack, MachOView, Cyberduck): [`.
 
 | Path | Audience | Purpose |
 |------|----------|---------|
+| [STUDENT_QUICK_REFERENCE.md](STUDENT_QUICK_REFERENCE.md) | Student | **One page:** lab paths, Mach names, copy-paste builds — use during class instead of transcribing |
 | [STUDENT_GUIDE.md](STUDENT_GUIDE.md) | Student | Session order, concepts, labs, troubleshooting |
 | [diagrams.md](diagrams.md) | Student | Figures (Mermaid) and whiteboard prompts |
 | [ASSESSMENT.md](ASSESSMENT.md) | Student | Rubric and exit tickets |
 | [case-studies/](case-studies/) | Student + instructor | Real-world tracks; instructor fills bundle YAML (private YAML gitignored) |
 
-Instructor talk tracks and answer keys: **`instructor_private/`** (see [`FOR_INSTRUCTORS.md`](../../FOR_INSTRUCTORS.md)).
+Answer keys (if used): keep private per [`FOR_INSTRUCTORS.md`](../../FOR_INSTRUCTORS.md); not required to complete labs.
 
 ## Labs (code)
 
 | Path | Purpose |
 |------|---------|
 | [labs/ch08-c-xpc/README.md](../../../labs/ch08-c-xpc/README.md) | Minimal **C / libxpc** Mach service + client |
+| [labs/ch08-pocs/README.md](../../../labs/ch08-pocs/README.md) | **NSXPC** minimal pair + **case-study PoCs** (WiFiSpoof / Shove / Zoom) — VM-only |
 | [labs/xpc/README_STUDENT.md](../../../labs/xpc/README_STUDENT.md) | **Swift NSXPC** privileged helper + exploit |
 
 ## Ethics and safety

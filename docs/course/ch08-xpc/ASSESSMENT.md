@@ -1,5 +1,7 @@
 # Chapter 8 — assessment
 
+**Prep:** rubric + labs align with **[STUDENT_QUICK_REFERENCE.md](STUDENT_QUICK_REFERENCE.md)** and **[STUDENT_GUIDE.md](STUDENT_GUIDE.md)** — same Mach names and repo paths.
+
 ## Rubric (100 points — instructor may reweight)
 
 

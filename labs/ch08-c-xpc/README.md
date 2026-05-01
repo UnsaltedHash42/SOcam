@@ -20,6 +20,22 @@ If linking fails, try adding `-framework Foundation` (platform-dependent).
 
 ## Install (root)
 
+### Option A — same layout as class demo (binary stays in repo clone)
+
+From `labs/ch08-c-xpc`, after `clang` builds:
+
+```bash
+SRV_PATH="$PWD/xpcserver"
+sed "s|__BINPATH__|$SRV_PATH|" com.example.student.xpc.plist.template | sudo tee /Library/LaunchDaemons/com.example.student.xpc.plist >/dev/null
+sudo chown root:wheel /Library/LaunchDaemons/com.example.student.xpc.plist
+sudo chmod 644 /Library/LaunchDaemons/com.example.student.xpc.plist
+sudo launchctl bootstrap system /Library/LaunchDaemons/com.example.student.xpc.plist
+```
+
+Then run `./xpcclient` from the same directory.
+
+### Option B — copy server to `/usr/local/libexec` (longer-lived lab image)
+
 1. Copy the server binary to a stable path (example uses `/usr/local/libexec` — create directory if needed, or use `/tmp` **only** for a quick smoke test with a plist pointing there).
 
    ```bash

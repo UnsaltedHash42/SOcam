@@ -2,6 +2,8 @@
 
 **Prerequisite:** Instructor supplies the **specific Zoom build** (or VM with it pre-installed) for static analysis only unless they explicitly enable dynamic exploitation labs.
 
+**Repo (class narration):** [`zoom_exploit_lab.sh`](../../../../labs/ch08-pocs/zoom_exploit_lab.sh) + [`zoomxpc.m`](../../../../labs/ch08-pocs/zoomxpc.m) — requires Drive files named in the script header.
+
 ## Learning goals
 
 - Trace a **third-party privileged helper** pattern similar to other desktop apps.

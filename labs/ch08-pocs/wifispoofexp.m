@@ -3,7 +3,7 @@
  * Target: vulnerable WiFiSpoof HelperTool + matching app authorization right.
  * Run from a directory authd can read (NOT ~/Downloads) or AuthorizationCreate may fail.
  *
- * Build: gcc -framework Foundation -framework Security wifispoofexp.m -o wifispoofexp
+ * Build: gcc -fobjc-arc -framework Foundation -framework Security wifispoofexp.m -o wifispoofexp
  */
 
 #import <Foundation/Foundation.h>

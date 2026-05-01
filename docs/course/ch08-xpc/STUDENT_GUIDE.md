@@ -2,7 +2,18 @@
 
 This guide replaces reliance on the course PDF. Session numbers are suggestions; your instructor may merge or split them.
 
+**Minimal note-taking:** keep **[`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md)** open during labs — build commands, Mach names, and repo paths are collected there so you can **run first**, then read prose here for *why*.
+
 **Large installers (Zoom, WiFiSpoof, VM snapshots):** not in git — your instructor’s **Google Drive** link is in [`README.md`](README.md) (search *Lab artifacts*). Download before the case-study sessions.
+
+| Session (this guide) | Primary repo code / doc |
+|----------------------|-------------------------|
+| A — Why XPC | *Observation only* — use any app’s `Contents/XPCServices` + `codesign` |
+| B — C API | [`labs/ch08-c-xpc/`](../../../labs/ch08-c-xpc/) |
+| C — NSXPC | [`labs/ch08-pocs/`](../../../labs/ch08-pocs/) (`nsxpcserver.m`, `nsxpcclient.m`, plist template) |
+| D–E — Attack model & APIs | [`case-studies/README.md`](case-studies/README.md) + Apple docs (names in guide) |
+| F–H — Case studies | [`case-studies/*.md`](case-studies/) + PoC sources in [`labs/ch08-pocs/`](../../../labs/ch08-pocs/) |
+| I — Wrap | Comparison table (below) + [`labs/xpc/`](../../../labs/xpc/) capstone |
 
 ---
 
@@ -56,10 +67,13 @@ This guide replaces reliance on the course PDF. Session numbers are suggestions;
 
 **Goals:** Map Objective-C / Swift **protocols** to remote calls; locate **`NSXPCListenerDelegate`** and **`listener:shouldAcceptNewConnection:`**.
 
+**Lab (same ideas as class, in Objective-C):** [`labs/ch08-pocs/README.md`](../../../labs/ch08-pocs/README.md) — build `nsxpcserver` / `nsxpcclient`, install `com.offsec.nsxpc.plist`, round-trip one RPC. **Commands:** also in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md).
+
 **Rules of thumb (NSXPC):**
 
 - Remote methods are **async**; return type is often `void` with a **reply block** for results.
 - Argument types must be **XPC-safe** (primitives, `NSData`, a small set of Cocoa types per Apple’s rules).
+- **`NSXPCConnectionPrivileged`** is required for typical **launchd**-managed helpers (literal `0x1000` often shows up in Hopper).
 
 **Exercise (conceptual):** Sketch on paper the three layers from Session B, but label them `NSXPCListener`, `NSXPCConnection`, and “remote object proxy.”
 
@@ -81,7 +95,7 @@ This guide replaces reliance on the course PDF. Session numbers are suggestions;
 5. Apple-only services: caller may need **entitlements** you do not have — expect **deny**.
 6. Prefer decisions tied to **audit identity**, not naive **PID** checks (PID reuse).
 
-**Capstone lab (controlled):** [labs/xpc/README_STUDENT.md](../../../labs/xpc/README_STUDENT.md)
+**Hands-on later:** the **Swift** capstone (install helper + run exploit + uninstall) is in **Session I** — same checklist, code you can modify safely.
 
 ---
 
@@ -95,7 +109,9 @@ This guide replaces reliance on the course PDF. Session numbers are suggestions;
 
 ## Sessions F–H — Real-world case studies
 
-Work from **`case-studies/`** and the **instructor bundle** for exact versions. Typical arc per case:
+Work from **`case-studies/`** for structured questions; your instructor supplies **exact builds** (Drive / VM). **Runnable PoC source** that matches the course narrative lives in **`labs/ch08-pocs/`** (same filenames the instructor walks through — build lines in that README and in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md)).
+
+Typical arc per case:
 
 1. **Reachability:** Who can open the Mach / XPC surface?
 2. **Trust failure:** Which checklist item (Session D) failed?
@@ -103,17 +119,19 @@ Work from **`case-studies/`** and the **instructor bundle** for exact versions. 
 4. **Impact:** User → root? sandbox escape? SIP-related effect? (Case-specific.)
 5. **Fix:** What did the vendor or Apple change?
 
-**Tracks (names only — details in each file):**
+**Tracks:**
 
-- `case-studies/cve-2021-44214-wifispoof.md`
-- `case-studies/cve-2022-26712-packagekit.md`
-- `case-studies/zoom-583-lpe.md`
+- [case-studies/cve-2021-44214-wifispoof.md](case-studies/cve-2021-44214-wifispoof.md) — helper: `wifispoofexp.m`
+- [case-studies/cve-2022-26712-packagekit.md](case-studies/cve-2022-26712-packagekit.md) — PoC: `shovexpc.m` (**Monterey &lt; 12.4**)
+- [case-studies/zoom-583-lpe.md](case-studies/zoom-583-lpe.md) — `zoomxpc.m` + `zoom_exploit_lab.sh` (+ Drive artifacts)
 
 ---
 
-## Session I — Wrap-up
+## Session I — Wrap-up + Swift capstone
 
-**Compare** the three cases on one table: reachability, trust mistake, primitive, impact, lesson.
+**Compare** the three case studies on one table: reachability, trust mistake, primitive, impact, lesson.
+
+**Controlled first-party exploit (you own the helper):** [labs/xpc/README_STUDENT.md](../../../labs/xpc/README_STUDENT.md) — `install_lab.sh` → `swiftc Exploit/exploit.swift` → run → **`uninstall_lab.sh`**. Commands duplicated in [`STUDENT_QUICK_REFERENCE.md`](STUDENT_QUICK_REFERENCE.md).
 
 **Prepare for next module:** How XPC weaknesses chain with **TCC**, **SIP**, and **injection** lessons later in the course (instructor will point to exact modules).
 

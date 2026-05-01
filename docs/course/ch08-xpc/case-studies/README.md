@@ -1,21 +1,25 @@
 # Case studies (real-world)
 
-Each worksheet assumes you are using **instructor-supplied** software builds (VM image, `.dmg`, or folder). **Do not** hunt random installers from the web in class.
+Each worksheet is a **structured worksheet**: questions, Hopper prompts, and vocabulary — not a second textbook. Use it alongside the **runnable PoC source** in [`../../../../labs/ch08-pocs/`](../../../../labs/ch08-pocs/) when your instructor runs that segment.
 
 ## Before you start
 
-1. Copy `cohort-software.template.yaml` to a **private** file under `instructor-bundles/` (gitignored) listing version, SHA-256, and paths for each cohort.
-2. Snapshot the VM **before** installing old vulnerable builds.
-3. Validate every **Hopper / lldb** prompt in the worksheet against the **exact** binary you were given — symbols and Mach names drift across releases.
+1. Use only **instructor-supplied** installers / VM images (Drive or class portal). **Do not** download random “old Zoom” or “old WiFiSpoof” builds from the open web for this unit.
+2. **Snapshot the VM** before installing vulnerable-by-design software.
+3. Symbols and Mach names **drift between releases** — always match Hopper prompts to the **exact** binary you were given.
 
 ## Tracks
 
-| File | Topic |
-|------|--------|
-| [cve-2021-44214-wifispoof.md](cve-2021-44214-wifispoof.md) | Third-party privileged helper, authorization mistakes |
-| [cve-2022-26712-packagekit.md](cve-2022-26712-packagekit.md) | System component / trust boundary (historical macOS) |
-| [zoom-583-lpe.md](zoom-583-lpe.md) | Third-party helper surface (historical Zoom build) |
+| File | Topic | PoC / demo code in repo |
+|------|--------|---------------------------|
+| [cve-2021-44214-wifispoof.md](cve-2021-44214-wifispoof.md) | Third-party privileged helper, authorization mistakes | [`wifispoofexp.m`](../../../../labs/ch08-pocs/wifispoofexp.m) |
+| [cve-2022-26712-packagekit.md](cve-2022-26712-packagekit.md) | System component / SIP-class move (**Monterey &lt; 12.4**) | [`shovexpc.m`](../../../../labs/ch08-pocs/shovexpc.m) |
+| [zoom-583-lpe.md](zoom-583-lpe.md) | Installer daemon + TOCTOU (**Drive artifacts required**) | [`zoomxpc.m`](../../../../labs/ch08-pocs/zoomxpc.m), [`zoom_exploit_lab.sh`](../../../../labs/ch08-pocs/zoom_exploit_lab.sh) |
 
 ## Legal
 
 Only analyze software you are **licensed** to run for security education. Your institution’s policy governs redistribution of installers.
+
+## Instructors only
+
+Cohort version pinning belongs in a **private** YAML (see `cohort-software.template.yaml`); do not commit filled paths to a **public** fork.

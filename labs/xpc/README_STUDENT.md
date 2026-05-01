@@ -2,6 +2,8 @@
 
 This lab demonstrates **local privilege escalation** through an **`NSXPCListener`** that accepts **any** client. Run only on a **VM** or machine you can wipe.
 
+**At a glance:** install → compile exploit → run → uninstall commands are also on **[`docs/course/ch08-xpc/STUDENT_QUICK_REFERENCE.md`](../../docs/course/ch08-xpc/STUDENT_QUICK_REFERENCE.md)** so you can follow without copying this README into your notes.
+
 ## What lives in Git vs Google Drive
 
 | Material | Where |
