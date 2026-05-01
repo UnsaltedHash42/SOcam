@@ -1,5 +1,7 @@
 # Chapter 8 — diagrams and whiteboard prompts
 
+**Preview in VS Code / Cursor:** blocks below are **Mermaid** (the opening fence must be tagged `mermaid`). VS Code’s stock preview does **not** render Mermaid; install **Markdown Preview Mermaid Support** (`bierner.markdown-mermaid`) from this repo’s recommended extensions, then run **Markdown: Open Preview** again. GitHub renders the same syntax on the web.
+
 ## 0. Elevator: XPC in one breath
 
 **XPC** = typed **dictionary** messages between processes, on top of **Mach** ports. **NSXPC** = Cocoa protocols and proxies over the same idea. **Privileged helpers** = small root daemons reached by name — if trust checks are wrong, IPC becomes **remote root**.

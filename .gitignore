@@ -24,7 +24,8 @@ Callandor/
 .DS_Store
 *.swp
 .idea/
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 *.dSYM/
 
 # Build outputs
