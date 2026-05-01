@@ -1,0 +1,3 @@
+# Filled cohort manifests may contain local paths to licensed DMGs — keep private.
+instructor-bundles/*.yaml
+!instructor-bundles/.gitkeep

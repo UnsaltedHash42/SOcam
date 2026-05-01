@@ -1,0 +1,25 @@
+# Copy to a PRIVATE file per cohort (do not commit paths to licensed DMGs).
+# Suggested local name: instructor-bundles/cohort-2026-05.yaml (gitignored)
+
+cohort: "YYYY-MM-DD"
+macos_vm_snapshot: ""
+
+artifacts:
+  wifispoof:
+    version: ""
+    sha256: ""
+    path_on_instructor_machine: ""
+    mach_service_for_helper: "com.sweetpproductions.WiFiSpoofHelperTool"  # verify against YOUR binary
+    student_notes: "CVE-2021-44214 — validate symbols in Hopper before class"
+
+  packagekit_case:
+    version: ""
+    sha256: ""
+    path_on_instructor_machine: ""
+    student_notes: "CVE-2022-26712 — requires instructor-matched macOS / VM"
+
+  zoom:
+    version: "5.8.3"
+    sha256: ""
+    path_on_instructor_machine: ""
+    student_notes: "Historical LPE case — only analyze instructor-provided build"

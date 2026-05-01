@@ -1,0 +1,36 @@
+# --- Student / public GitHub: never commit these ---
+exp-312.pdf
+exp-312.md
+module_09_xpc.md
+instructor_notes.md
+instructor_master_class.md
+instructor_private/
+
+# Internal planning (optional: remove this line if you want plans in a private branch)
+docs/plans/
+
+# Large reverse-engineering targets (place locally; see resources/README.md)
+resources/**
+!resources/README.md
+!resources/.gitkeep
+
+# Nested / duplicate clones (not part of this course repo)
+socam_from_git/
+Callandor/
+
+# OS / IDE
+.DS_Store
+*.swp
+.idea/
+.vscode/
+*.dSYM/
+
+# Build outputs
+*.o
+a.out
+*.zip
+
+# Compiled lab artifacts (rebuild from .c / .m — do not commit)
+labs/hello
+labs/hello-restricted
+labs/*.dylib
