@@ -4,7 +4,7 @@ This repository is organized so **`git clone`** gives students **labs + student 
 
 ## What never goes to the student remote
 
-**Org-private repo:** `instructor/ch08-xpc/` (MASTER sheet, `CH08_DOCUMENT_MAP.md`, `CH08_DEEP_*.md`, `module_09_xpc.md`) and `labs/ch08-pocs/` (reference POCs) are **tracked** for staff + enrolled students on the same GitHub — still classroom-only; do not mirror to a **public** fork without stripping them.
+**Org-private repo:** `instructor/ch08-xpc/` (`00_HOW_TO_TEACH_CH08.md`, numbered lectures `01_…`–`09_…`, `MASTER_CH08_INSTRUCTOR.md` cheat sheet, `module_09_xpc.md`) and `labs/ch08-pocs/` (reference POCs) are **tracked** for staff + enrolled students on the same GitHub — still classroom-only; do not mirror to a **public** fork without stripping them.
 
 The root **`.gitignore`** still excludes:
 

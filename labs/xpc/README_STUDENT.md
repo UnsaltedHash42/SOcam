@@ -63,4 +63,4 @@ sudo ./uninstall_lab.sh
 ## Related reading
 
 - Course student guide: `docs/course/ch08-xpc/STUDENT_GUIDE.md`
-- Instructor script: `instructor_private/ch08-xpc/LESSON_SCRIPT.md` (not on GitHub — see `FOR_INSTRUCTORS.md`)
+- Instructor voice lectures: `instructor/ch08-xpc/00_HOW_TO_TEACH_CH08.md` and `01_…`–`09_…` (see repo root `README.md`); optional Swift lines in `instructor/ch08-xpc/module_09_xpc.md`
