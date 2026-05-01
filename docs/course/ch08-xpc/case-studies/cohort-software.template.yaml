@@ -4,6 +4,9 @@
 cohort: "YYYY-MM-DD"
 macos_vm_snapshot: ""
 
+# Paste the same URL you put in docs/course/ch08-xpc/README.md (optional; keep private copy gitignored).
+instructor_artifacts_drive_url: "https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_FOLDER_ID"
+
 artifacts:
   wifispoof:
     version: ""

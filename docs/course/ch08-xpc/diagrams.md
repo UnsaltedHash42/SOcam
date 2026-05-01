@@ -1,5 +1,11 @@
 # Chapter 8 — diagrams and whiteboard prompts
 
+## 0. Elevator: XPC in one breath
+
+**XPC** = typed **dictionary** messages between processes, on top of **Mach** ports. **NSXPC** = Cocoa protocols and proxies over the same idea. **Privileged helpers** = small root daemons reached by name — if trust checks are wrong, IPC becomes **remote root**.
+
+---
+
 ## 1. Where XPC sits
 
 Use when explaining §8.1 (IPC stack).

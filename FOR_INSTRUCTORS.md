@@ -26,8 +26,9 @@ The root **`.gitignore`** still excludes:
 
 GitHub is a poor CDN. Prefer:
 
+- **Google Drive** (or similar): exact Chapter 8 filenames and optional course-wide blobs are listed in **`resources/README.md`** and **`instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`** §15. Paste your folder URL into **`docs/course/ch08-xpc/README.md`** by replacing `REPLACE_WITH_YOUR_FOLDER_ID` in the markdown link (or point students to LMS only and strip the placeholder from a private fork).
 - **GitHub Releases** (attach a `.zip` / `.dmg` per cohort; students download release asset), or
-- **Org file share** (Drive, S3, internal artifact server) linked from LMS, or
+- **Org file share** (S3, internal artifact server) linked from LMS, or
 - **Git LFS** only if your org pays for bandwidth and you enforce quotas.
 
 ## One remote workflow

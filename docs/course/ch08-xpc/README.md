@@ -8,6 +8,24 @@ This folder is the **Markdown-first** spine for the macOS reverse-engineering un
 - An **isolated VM** or dedicated lab machine for anything that loads **LaunchDaemons**, runs **root helpers**, or installs **vulnerable-by-design** binaries.
 - **Instructor-supplied** follow-along packages for the **case studies** (exact builds, disk images, or VM snapshots). Paths and checksums live in private manifests derived from `case-studies/cohort-software.template.yaml` — do not commit filled YAML if it points to licensed DMGs.
 
+### Lab artifacts (Google Drive)
+
+**Instructor:** Replace the URL below with your shared folder (view or comment access for students). One folder can hold everything in the table.
+
+**Students:** Download only what your instructor lists for your cohort; unzip/copy into `~/TeachingArtifacts/ch08/` or `resources/` as directed.
+
+**[Chapter 8 lab artifacts — Google Drive](https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_FOLDER_ID)** — *instructor: replace `REPLACE_WITH_YOUR_FOLDER_ID` with your shared folder ID (or paste the full `https://drive.google.com/...` URL as the link target).*
+
+| Filename (typical) | Session / lab |
+|--------------------|---------------|
+| `ZoomInstallerIT-5.8.3.pkg` | Zoom 5.8.3 / `zoom_exploit_lab.sh` |
+| `zoom.us.app-4.6.7.zip` | same |
+| WiFiSpoof vulnerable installer (instructor-named) | WiFiSpoof / CVE-2021-44214 |
+| `EvenBetterAuthorizationSample.zip` (optional) | EvenBetter pattern (Session F) |
+| Monterey **&lt; 12.4** VM image or snapshot export | PackageKit Shove (Session H) |
+
+Full rationale and optional course-wide files (Slack, MachOView, Cyberduck): [`../../../resources/README.md`](../../../resources/README.md).
+
 ## Repo layout (this chapter)
 
 | Path | Audience | Purpose |

@@ -2,9 +2,19 @@
 
 This guide replaces reliance on the course PDF. Session numbers are suggestions; your instructor may merge or split them.
 
+**Large installers (Zoom, WiFiSpoof, VM snapshots):** not in git — your instructor’s **Google Drive** link is in [`README.md`](README.md) (search *Lab artifacts*). Download before the case-study sessions.
+
 ---
 
 ## Session A — Why XPC exists
+
+### What is XPC? (concept)
+
+**XPC** (Cross-Process Communication) is Apple’s **structured** IPC in user space: processes exchange **typed messages**, almost always **XPC dictionaries** of strings, numbers, data blobs, and nested objects. It is built on **Mach** (kernel ports and messages), but you rarely touch raw Mach in application code — you use **`libxpc`** in C or **`NSXPCConnection`** in Objective-C/Swift.
+
+**Why it matters for security:** a **privileged helper** (root daemon, often under `/Library/PrivilegedHelperTools/`) exposes an IPC **surface**. If the helper accepts connections from the wrong peer, or trusts **message fields** without hardening, attackers can get **root-level primitives** without a traditional memory-corruption bug.
+
+**Vocabulary:** **Mach service name** (registered with launchd), **listener** (server), **connection** (client channel), **`shouldAcceptNewConnection:`** (common trust gate in NSXPC). See [diagrams.md](diagrams.md) for stack and reachability figures.
 
 **Goals:** Explain **isolation** (crash containment) and **privilege separation** (different entitlements per process). Recognize an **XPC service bundle** (`*.xpc` under `Contents/XPCServices/`).
 
