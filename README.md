@@ -36,4 +36,6 @@ This repo does **not** include vendor course PDFs or proprietary manuals. Use on
 
 ## Instructors
 
-See **[`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md)** for what stays off GitHub and how to restore private files locally.
+- **Chapter 8 one-screen brief:** [`instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md`](instructor/ch08-xpc/MASTER_CH08_INSTRUCTOR.md) — script + Hopper + Terminal + bailouts.
+- **Org workflow / git hygiene:** [`FOR_INSTRUCTORS.md`](FOR_INSTRUCTORS.md)
+- **Reference POC sources (WiFiSpoof / Shove / Zoom / NSXPC demo):** [`labs/ch08-pocs/README.md`](labs/ch08-pocs/README.md)

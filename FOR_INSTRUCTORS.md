@@ -4,7 +4,9 @@ This repository is organized so **`git clone`** gives students **labs + student 
 
 ## What never goes to the student remote
 
-The root **`.gitignore`** excludes:
+**Org-private repo:** `instructor/ch08-xpc/` (MASTER sheet, `module_09_xpc.md`) and `labs/ch08-pocs/` (reference POCs) are **tracked** for staff + enrolled students on the same GitHub — still classroom-only; do not mirror to a **public** fork without stripping them.
+
+The root **`.gitignore`** still excludes:
 
 - `exp-312.pdf`, `exp-312.md` — keep on your laptop or LMS; do not rely on git for OffSec redistribution policy.
 - `module_09_xpc.md` — moved under **`instructor_private/`** (copy there; root copy removed from the canonical tree).
