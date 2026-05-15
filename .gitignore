@@ -13,10 +13,6 @@ instructor/
 # Internal planning (optional: remove this line if you want plans in a private branch)
 docs/plans/
 
-# AI-assisted reversing teaching tree — kept in private notes, not the public student tree
-docs/course/ai-re/
-labs/ai-re/
-
 # Large reverse-engineering targets (place locally; see resources/README.md)
 resources/**
 !resources/README.md

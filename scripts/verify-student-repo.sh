@@ -17,8 +17,6 @@ FORBIDDEN=(
 	"resources/Slack.app"
 	"resources/MachOView"
 	"socam_from_git"
-	"docs/course/ai-re"
-	"labs/ai-re"
 )
 
 bad=0

@@ -5,6 +5,7 @@ Canonical paths for each published module. Stubs (e.g. `lab_dylib_injection/`) r
 | Module | Entry |
 |--------|--------|
 | **08 — XPC** | [`ch08-xpc/README.md`](ch08-xpc/README.md) · one-page commands [`ch08-xpc/STUDENT_QUICK_REFERENCE.md`](ch08-xpc/STUDENT_QUICK_REFERENCE.md) |
+| **AI-assisted RE** (off-cycle; after Ch. 8) | [`ai-re/README.md`](ai-re/README.md) · [`ai-re/STUDENT_QUICK_REFERENCE.md`](ai-re/STUDENT_QUICK_REFERENCE.md) |
 | **02 — Dylib injection** | [`../labs/dylib-injection/README.md`](../labs/dylib-injection/README.md) · narrative [`../session_dylib_injection.md`](../session_dylib_injection.md) |
 | **Mach lecture** | [`../mach_microkernel_master_class.md`](../mach_microkernel_master_class.md) |
 | **Mach ports samples** | [`../labs/machports/README.md`](../labs/machports/README.md) |
