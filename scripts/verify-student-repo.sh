@@ -17,12 +17,18 @@ FORBIDDEN=(
 	"resources/Slack.app"
 	"resources/MachOView"
 	"socam_from_git"
+	"docs/course/ai-re"
+	"labs/ai-re"
 )
 
 bad=0
 for f in "${FORBIDDEN[@]}"; do
+	# Match tracked file OR any tracked file under the forbidden directory.
 	if git ls-files --error-unmatch "$f" >/dev/null 2>&1; then
 		echo "[-] Forbidden tracked path: $f"
+		bad=1
+	elif git ls-files -- "$f/" 2>/dev/null | grep -q .; then
+		echo "[-] Forbidden tracked tree: $f/"
 		bad=1
 	fi
 done

@@ -1,6 +1,6 @@
 # Chapter 8 — diagrams and whiteboard prompts
 
-**Preview in VS Code / Cursor:** blocks below are **Mermaid** (the opening fence must be tagged `mermaid`). VS Code’s stock preview does **not** render Mermaid; install **Markdown Preview Mermaid Support** (`bierner.markdown-mermaid`) from this repo’s recommended extensions, then run **Markdown: Open Preview** again. GitHub renders the same syntax on the web.
+**Preview in VS Code / Cursor:** blocks below are **Mermaid** (the opening fence must be tagged `mermaid`). VS Code’s stock preview does **not** render Mermaid; install **Markdown Preview Mermaid Support** (`bierner.markdown-mermaid`) from this repo’s recommended extensions, then run **Markdown: Open Preview** again. GitHub renders the same syntax on the web. If the preview shows **No diagram type detected matching given configuration for text:**, another Mermaid-related extension is usually fighting the preview — keep **`bierner.markdown-mermaid` enabled**, **disable or uninstall** extensions such as **Mermaid Chart** (`MermaidChart.vscode-mermaid-chart`) or **Mermaid Preview** (`vstirbu.vscode-mermaid-preview`), then **Developer: Reload Window** and open the preview again.
 
 ## 0. Elevator: XPC in one breath
 
