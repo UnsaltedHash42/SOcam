@@ -1,5 +1,7 @@
 # AI-assisted reversing (macOS Reversing Station)
 
+In this course repo the **whole class pack** is this directory: `docs/course/ai-re/` (all `.md` files below are the student docs). If you only opened `labs/ai-re/README.md`, that file is a stub; **come back here.**
+
 Off-cycle unit between Chapter 8 (XPC) and Chapter 9. You use an agent plus the [mac-reversing-station](https://github.com/UnsaltedHash42/mac-reversing-station) repo to run a full pass on a planted XPC daemon.
 
 **Start here:** [STUDENT_GUIDE.md](STUDENT_GUIDE.md) — Session 0 is a numbered setup (VM → SSH → setup script → project clone → orientation).

@@ -1,6 +1,17 @@
-# AI-assisted reversing — station lab (stub: code lives in a separate repo)
+# AI-assisted reversing — `labs/ai-re/` is not the class pack
 
-Unlike Chapters 02 and 08, the **runnable code for this unit does not live under `labs/`**. The lab is the **macOS Reversing Station** itself, which is its own public repo.
+**Student readings, setup steps, and agent prompts are in this repo under [`docs/course/ai-re/`](../../docs/course/ai-re/README.md)** (same GitHub repo; different path). Open that folder on GitHub or clone and go to `docs/course/ai-re/STUDENT_GUIDE.md`.
+
+| What you want | Path |
+|---------------|------|
+| Main walkthrough | [`docs/course/ai-re/STUDENT_GUIDE.md`](../../docs/course/ai-re/STUDENT_GUIDE.md) |
+| Prompts + Plan-B shell | [`docs/course/ai-re/STUDENT_QUICK_REFERENCE.md`](../../docs/course/ai-re/STUDENT_QUICK_REFERENCE.md) |
+| Worksheet | [`docs/course/ai-re/case-studies/tutorial-daemon-planted.md`](../../docs/course/ai-re/case-studies/tutorial-daemon-planted.md) |
+| Optional Lab II | [`docs/course/ai-re/LAB_II.md`](../../docs/course/ai-re/LAB_II.md) |
+
+---
+
+Unlike Chapters 02 and 08, **runnable lab code** for this unit does not live under `labs/`. The executable target and scripts ship in **mac-reversing-station** (separate repo, below).
 
 **Chapter 8 prerequisite:** you should already understand Mach-named XPC listeners, `shouldAcceptNewConnection:`, and why privileged helpers are high-value targets — see [`docs/course/ch08-xpc/STUDENT_GUIDE.md`](../../docs/course/ch08-xpc/STUDENT_GUIDE.md). This unit adds the **agent-driven pass loop** (intake → scan → triage → confirm → PoC → chain) on top of that surface.
 

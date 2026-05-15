@@ -10,7 +10,7 @@ Student-facing labs and guides for an in-house macOS RE series. **Clone this rep
 | 02b | Mach ports scratch / class examples | [`labs/machports/README.md`](labs/machports/README.md) |
 | — | Mach / microkernel lecture notes | [`mach_microkernel_master_class.md`](mach_microkernel_master_class.md) |
 | 08 | XPC attacks (Apple Silicon track) | [`docs/course/ch08-xpc/README.md`](docs/course/ch08-xpc/README.md) |
-| — | AI-assisted RE (macOS Reversing Station; off-cycle) | [`docs/course/ai-re/README.md`](docs/course/ai-re/README.md) |
+| — | **AI-assisted RE** (agent + Reversing Station) | **Guides live in** [`docs/course/ai-re/`](docs/course/ai-re/) — start [`STUDENT_GUIDE.md`](docs/course/ai-re/STUDENT_GUIDE.md) · [`STUDENT_QUICK_REFERENCE.md`](docs/course/ai-re/STUDENT_QUICK_REFERENCE.md). *Not* under `labs/ai-re/` (that folder is a pointer only). |
 
 More modules will be linked under [`docs/course/README.md`](docs/course/README.md) as they are backfilled.
 
@@ -25,11 +25,11 @@ labs/
   dylib-injection/     # Primary dylib / shellcode lab (use this path)
   machports/           # Extra Mach port samples from class
   ch08-xpc/            # Chapter 8 — all XPC labs (`01_`–`06_*` sources in one folder)
-  ai-re/               # Stub — runnable code is mac-reversing-station (see README)
+  ai-re/               # Pointer only → real student prose in docs/course/ai-re/
 docs/
   course/
     ch08-xpc/          # XPC student guide, diagrams, assessment, case worksheets
-    ai-re/             # AI-assisted RE student guide (station workflow; off-cycle)
+    ai-re/             # AI-assisted RE: STUDENT_GUIDE, QUICK_REFERENCE, worksheet, LAB_II
 ```
 
 ## License / course text
