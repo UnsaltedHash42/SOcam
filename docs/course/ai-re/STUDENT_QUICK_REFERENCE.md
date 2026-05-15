@@ -2,7 +2,7 @@
 
 Paste **agent prompts** below into Cursor or Claude Code. Shell under [Plan-B](#plan-b-raw-shell-commands) is backup only.
 
-Full setup (do in order): **[STUDENT_GUIDE.md — Session 0](STUDENT_GUIDE.md#session-0--lab-setup-do-these-steps-in-order)** · worksheet: [case-studies/tutorial-daemon-planted.md](case-studies/tutorial-daemon-planted.md)
+Full setup line-by-line (SSH block, `setup-keep.sh`, what to expect): [**SETUP.md**](SETUP.md). Narrative: [STUDENT_GUIDE.md Session 0](STUDENT_GUIDE.md#session-0--lab-setup-do-these-steps-in-order).
 
 **Chapter 8 refresh:** [ch08-xpc/STUDENT_GUIDE.md](../ch08-xpc/STUDENT_GUIDE.md) Sessions A–D.
 
@@ -75,16 +75,9 @@ If a lab fails with **connection invalid**, the name in **source**, **plist**, a
 
 ## Lab setup (human — before any prompt below)
 
-Do [STUDENT_GUIDE.md Session 0](STUDENT_GUIDE.md#session-0--lab-setup-do-these-steps-in-order) Steps 1–8 first.
+Do [SETUP.md](SETUP.md) Steps 1–7 (or [STUDENT_GUIDE.md Session 0](STUDENT_GUIDE.md#session-0--lab-setup-do-these-steps-in-order)) before any prompt below.
 
-**SSH config** (`~/.ssh/config` on your Mac — change IP and username):
-
-```
-Host lab-mac
-  HostName 192.168.64.2
-  User student
-  ServerAliveInterval 30
-```
+**SSH config** (`~/.ssh/config` on your Mac — change IP and username). Full block and **first contact**: [SETUP.md § 2](SETUP.md#2--ssh-config-workstation).
 
 **Setup script** (from `~/tools/mac-reversing-station/`):
 
@@ -96,6 +89,8 @@ scripts/setup-keep.sh \
   --lab-disposable \
   --live-smoke
 ```
+
+See [SETUP.md § 4](SETUP.md#setup-keep) for the full block and **what you should see**.
 
 Agent work happens only in `~/re/tutorial-daemon-class/`.
 

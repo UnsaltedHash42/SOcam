@@ -4,7 +4,9 @@ In this course repo the **whole class pack** is this directory: `docs/course/ai-
 
 Off-cycle unit between Chapter 8 (XPC) and Chapter 9. You use an agent plus the [mac-reversing-station](https://github.com/UnsaltedHash42/mac-reversing-station) repo to run a full pass on a planted XPC daemon.
 
-**Start here:** [STUDENT_GUIDE.md](STUDENT_GUIDE.md) — Session 0 is a numbered setup (VM → SSH → setup script → project clone → orientation).
+**Copy-paste lab setup (SSH, `setup-keep.sh`, smoke):** [**SETUP.md**](SETUP.md)
+
+**Start here (full narrative):** [STUDENT_GUIDE.md](STUDENT_GUIDE.md) — Session 0 matches `SETUP.md` step-for-step.
 
 **In class:** keep [STUDENT_QUICK_REFERENCE.md](STUDENT_QUICK_REFERENCE.md) open for agent prompts.
 
@@ -25,7 +27,8 @@ Off-cycle unit between Chapter 8 (XPC) and Chapter 9. You use an agent plus the 
 
 | File | Use |
 |------|-----|
-| [STUDENT_GUIDE.md](STUDENT_GUIDE.md) | Full walkthrough |
+| [SETUP.md](SETUP.md) | **SSH config, `setup-keep.sh`, verify commands** — one-page copy-paste |
+| [STUDENT_GUIDE.md](STUDENT_GUIDE.md) | Full walkthrough + why |
 | [STUDENT_QUICK_REFERENCE.md](STUDENT_QUICK_REFERENCE.md) | Agent prompts + Plan-B shell |
 | [diagrams.md](diagrams.md) | Topology and pass loop |
 | [case-studies/tutorial-daemon-planted.md](case-studies/tutorial-daemon-planted.md) | Worksheet |
@@ -49,7 +52,7 @@ Host lab-mac
 
 Then: `ssh lab-mac 'uname -m; sw_vers -productVersion'` (password OK once).
 
-Full setup: [STUDENT_GUIDE.md — Session 0](STUDENT_GUIDE.md#session-0--lab-setup-do-these-steps-in-order).
+Full setup (**all steps**): [**SETUP.md**](SETUP.md) · checklist + narrative [STUDENT_GUIDE Session 0](STUDENT_GUIDE.md#session-0--lab-setup-do-these-steps-in-order).
 
 ---
 

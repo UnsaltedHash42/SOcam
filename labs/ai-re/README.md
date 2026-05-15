@@ -4,6 +4,7 @@
 
 | What you want | Path |
 |---------------|------|
+| Copy-paste SSH + `setup-keep.sh` | [`docs/course/ai-re/SETUP.md`](../../docs/course/ai-re/SETUP.md) |
 | Main walkthrough | [`docs/course/ai-re/STUDENT_GUIDE.md`](../../docs/course/ai-re/STUDENT_GUIDE.md) |
 | Prompts + Plan-B shell | [`docs/course/ai-re/STUDENT_QUICK_REFERENCE.md`](../../docs/course/ai-re/STUDENT_QUICK_REFERENCE.md) |
 | Worksheet | [`docs/course/ai-re/case-studies/tutorial-daemon-planted.md`](../../docs/course/ai-re/case-studies/tutorial-daemon-planted.md) |
@@ -55,7 +56,7 @@ The teaching code referenced in [`STUDENT_GUIDE.md`](../../docs/course/ai-re/STU
 | `Skills/offensive-macos-poc-authoring/SKILL.md` | PoC-authoring discipline | Sessions F, H, H+ |
 | `Skills/offensive-macos-chain-discovery/SKILL.md` | Multi-primitive chain discovery (next-chapter preview) | Session I wrap |
 
-Student prose, agent prompts, and copy-paste blocks: [`../../docs/course/ai-re/STUDENT_QUICK_REFERENCE.md`](../../docs/course/ai-re/STUDENT_QUICK_REFERENCE.md) and [`../../docs/course/ai-re/STUDENT_GUIDE.md`](../../docs/course/ai-re/STUDENT_GUIDE.md). Multi-binary bundle pass (separate take-home): [`../../docs/course/ai-re/LAB_II.md`](../../docs/course/ai-re/LAB_II.md).
+Student guides and copy-paste setup: [`docs/course/ai-re/SETUP.md`](../../docs/course/ai-re/SETUP.md) · [STUDENT_GUIDE Session 0](../../docs/course/ai-re/STUDENT_GUIDE.md#session-0--lab-setup-do-these-steps-in-order).
 
 ---
 

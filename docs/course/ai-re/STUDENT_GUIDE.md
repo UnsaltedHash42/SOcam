@@ -152,6 +152,25 @@ scripts/setup-keep.sh \
 
 Match `--remote-home` to `/Users/<your-lab-username>`. First run takes ~15 minutes (downloads Ghidra to the VM).
 
+**What you should see** (approximate order):
+
+1. Skills linked for Cursor / Claude Code (or run Step 6 `skill-link` scripts if setup skipped that).
+2. Message that **SSH key login** to `lab-mac` works without a password.
+3. **Long download** phase on the VM (JDK / Ghidra / MCP).
+4. **NOPASSWD sudo** confirmation for your lab user (because of `--lab-disposable`).
+5. **Smoke passes**, ending with **`[OK]`** lines from **`smoke-wave3.sh --live`** (especially `program_open`-style checks).
+
+If you ran setup **without** `--live-smoke`, run:
+
+```bash
+bash scripts/skill-link-claude-code.sh
+# or: bash cursor/skill-link.sh
+bash scripts/smoke-wave3.sh
+MACRE_MACHINE=lab-mac bash scripts/smoke-wave3.sh --live
+```
+
+One-file copy-paste version of Steps 2–8: [**SETUP.md**](SETUP.md).
+
 ---
 
 ### Step 5 — Exports and IDE restart
